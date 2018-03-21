@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:paddingBottom="10dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/readEmailToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/ToolbarStyle"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".1"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/readEmailFromInnerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="horizontal"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/readEmailFromLabel"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:paddingEnd="10dp"
+                android:text="From : "
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/readEmailFromText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="bottom"
+                android:text="From : "
+                android:textColor="@color/colorLightText"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/readEmailFromBlankLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="horizontal"
+            android:paddingTop="3dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/readEmailFromBlankLabel"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/readEmailFromBlankText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/colorLightText"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/readEmailToInnerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="horizontal"
+            android:paddingTop="3dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/readEmailToLabel"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:paddingEnd="10dp"
+                android:text="To : "
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/readEmailToText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="bottom"
+                android:text="To : "
+                android:textColor="@color/colorLightText"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/readEmailToBlankLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="horizontal"
+            android:paddingTop="3dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/readEmailToBlankLabel"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/readEmailToBlankText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/colorLightText"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/readEmailSubjectLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="horizontal"
+            android:paddingTop="3dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/readEmailSubjectLabel"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:paddingEnd="10dp"
+                android:text="Subject : "
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/readEmailSubjectText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:ellipsize="end"
+                android:gravity="bottom"
+                android:maxLines="10"
+                android:text="Subject : "
+                android:textAlignment="textStart"
+                android:textColor="@color/colorLightText"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/readEmailDateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="horizontal"
+            android:paddingTop="3dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/readEmailDateLabel"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:paddingEnd="10dp"
+                android:text="Date : "
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/readEmailDateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="bottom"
+                android:textColor="@color/colorLightText"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/readEmailShowDetailsButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:background="@color/colorPrimary"
+        android:paddingBottom="5dp"
+        android:text="More"
+        android:textColor="@color/colorAccent"/>
+
+    <WebView
+        android:id="@+id/readEmailBody"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_weight="8"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
+
+    </WebView>
+
+    <LinearLayout
+        android:id="@+id/readEmailBottomMenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/readEmailBottomMenuReply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="Reply"
+            android:textColor="@color/colorAccent"
+            android:textSize="10sp"/>
+
+        <Button
+            android:id="@+id/readEmailBottomMenuForward"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="Forward"
+            android:textColor="@color/colorAccent"
+            android:textSize="10sp"/>
+
+        <Button
+            android:id="@+id/readEmailBottomMenuDelete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="Delete"
+            android:textColor="@color/colorAccent"
+            android:textSize="10sp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/readEmailBottomMenuReplyAll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="Reply All"
+            android:textColor="@color/colorAccent"
+            android:textSize="10sp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/readEmailBottomMenuMove"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="Move"
+            android:textColor="@color/colorAccent"
+            android:textSize="10sp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

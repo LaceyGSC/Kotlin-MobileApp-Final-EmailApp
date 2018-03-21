@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/groupAccounts"
+        android:checkableBehavior="single"
+        android:orderInCategory="1"/>
+
+        <item
+            android:id="@+id/addAccountButton"
+            android:title="Add Account"/>
+    <group
+        android:id="@+id/groupSetLabels"
+        android:orderInCategory="50">
+
+        <item
+            android:id="@+id/navigationInbox"
+            android:title="INBOX"
+            app:actionLayout="@layout/navigation_menu_counter_item"/>
+
+        <item
+            android:id="@+id/navigationUnread"
+            android:title="UNREAD"
+            app:actionLayout="@layout/navigation_menu_counter_item"/>
+
+        <item
+            android:id="@+id/navigationSent"
+            android:title="SENT"
+            app:actionLayout="@layout/navigation_menu_counter_item"/>
+
+        <item
+            android:id="@+id/navigationTrash"
+            android:title="TRASH"
+            app:actionLayout="@layout/navigation_menu_counter_item"/>
+
+        <item
+            android:id="@+id/navigationDrafts"
+            android:title="DRAFT"
+            app:actionLayout="@layout/navigation_menu_counter_item"/>
+    </group>
+    <group
+        android:id="@+id/groupLabels"
+        android:checkableBehavior="single"
+        android:orderInCategory="100"/>
+
+    <item
+        android:id="@+id/navigationAddLabel"
+        android:title="Add Folder"
+        android:orderInCategory="101"/>
+
+</menu>
